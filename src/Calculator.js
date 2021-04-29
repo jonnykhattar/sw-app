@@ -36,8 +36,9 @@ export class Calculator extends Component {
     render() {
         return (
             <div>
-                <img src="https://summonerswarskyarena.info/wp-content/uploads/2019/06/unit_icon_0051_0_3.png" alt="Icaru icon"/>
-                <h1>Defence Required: {this.remainingDef}</h1>
+                <img src="https://summonerswarskyarena.info/wp-content/uploads/2019/06/unit_icon_0051_0_3.png" alt="Icaru icon" />
+                <h1>Total Defence: {this.remainingDef + baseDef}</h1>
+                <h1>Addition Defence Required: {this.remainingDef}</h1>
                 <form>
                     <label>Defence Glory Tower Level: </label>
                     <select value={this.state.defGloryTowerLevel} onChange={this.handleChange} name='defGloryTowerLevel'>
