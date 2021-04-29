@@ -37,8 +37,7 @@ export class Calculator extends Component {
         return (
             <div>
                 <img src="https://summonerswarskyarena.info/wp-content/uploads/2019/06/unit_icon_0051_0_3.png" alt="Icaru icon" />
-                <h1>Total Defence required: {requiredDef}</h1>
-                <h1>Addition Defence from runes: {this.remainingDef}</h1>
+                <h1>Additional Defence from runes: {this.remainingDef}</h1>
                 <form>
                     <label>Defence Glory Tower Level: </label>
                     <select value={this.state.defGloryTowerLevel} onChange={this.handleChange} name='defGloryTowerLevel'>
