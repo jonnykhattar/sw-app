@@ -44,6 +44,7 @@ export class Calculator extends Component {
     render() {
         return (
             <div>
+                <img src="https://summonerswarskyarena.info/wp-content/uploads/2019/06/unit_icon_0051_0_3.png"/>
                 <h1>Defence Required: {this.remainingDef}</h1>
                 <form>
                     <label>Defence Glory Tower Level: </label>
