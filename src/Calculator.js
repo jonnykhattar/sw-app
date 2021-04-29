@@ -12,6 +12,8 @@ export class Calculator extends Component {
         };
     }
 
+    remainingDef;
+
     componentDidMount = () => {
         this.updateRemainingDef();
     }
@@ -25,8 +27,6 @@ export class Calculator extends Component {
 
     }
 
-    remainingDef;
-
     updateRemainingDef = () => {
         this.remainingDef = Math.round((requiredDef - baseDef) - (0.08 * this.state.numberOfDeterminationSets * baseDef) - ((this.state.defGloryTowerLevel * 0.01) * baseDef)
             - (baseDef * this.state.guildBuffValue));
@@ -37,8 +37,8 @@ export class Calculator extends Component {
         return (
             <div>
                 <img src="https://summonerswarskyarena.info/wp-content/uploads/2019/06/unit_icon_0051_0_3.png" alt="Icaru icon" />
-                <h1>Total Defence: {this.remainingDef + baseDef}</h1>
-                <h1>Addition Defence Required: {this.remainingDef}</h1>
+                <h1>Total Defence required: {requiredDef}</h1>
+                <h1>Addition Defence from runes: {this.remainingDef}</h1>
                 <form>
                     <label>Defence Glory Tower Level: </label>
                     <select value={this.state.defGloryTowerLevel} onChange={this.handleChange} name='defGloryTowerLevel'>
