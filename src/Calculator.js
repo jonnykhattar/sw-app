@@ -28,7 +28,7 @@ export class Calculator extends Component {
     remainingDef;
 
     updateRemainingDef = () => {
-        this.remainingDef = Math.round((requiredDef - baseDef) - (0.08 * this.state.numberOfDeterminationSets * baseDef) - (this.state.defGloryTowerLevel * baseDef)
+        this.remainingDef = Math.round((requiredDef - baseDef) - (0.08 * this.state.numberOfDeterminationSets * baseDef) - ((this.state.defGloryTowerLevel * 0.01) * baseDef)
             - (baseDef * this.state.guildBuffValue));
         this.forceUpdate();
     }
